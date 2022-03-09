@@ -1,0 +1,29 @@
+!SESSION 2022-03-04 14:56:00.522 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.fullversion=8.0.6.16 - pxa6480sr6fp16-20200902_01(SR6 FP16)
+JRE 1.8.0 Linux amd64-64-Bit Compressed References 20200901_454898 (JIT enabled, AOT enabled)
+OpenJ9   - 2799ddf
+OMR      - b348d97
+IBM      - 5371022
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -b /home/bandaru/Downloads/
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -data /home/bandaru/Downloads/Task -b /home/bandaru/Downloads/
+
+!ENTRY org.eclipse.equinox.registry 2 0 2022-03-04 14:56:31.726
+!MESSAGE The extensions and extension-points from the bundle "org.eclipse.emf.commonj.sdo" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.emf.ecore 2 0 2022-03-04 14:56:36.926
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
+!SESSION 2022-03-04 14:58:38.733 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.fullversion=8.0.6.16 - pxa6480sr6fp16-20200902_01(SR6 FP16)
+JRE 1.8.0 Linux amd64-64-Bit Compressed References 20200901_454898 (JIT enabled, AOT enabled)
+OpenJ9   - 2799ddf
+OMR      - b348d97
+IBM      - 5371022
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -showlocation -product com.ibm.etools.msgbroker.tooling.ide -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -b /home/bandaru/Downloads/sample.bar -p /home/bandaru/Downloads/Task
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -showlocation -product com.ibm.etools.msgbroker.tooling.ide -application com.ibm.etools.mft.bar.cmdline.mqsicreatebar -data /home/bandaru/Downloads/Task/ -b /home/bandaru/Downloads/sample.bar -p /home/bandaru/Downloads/Task
+
+!ENTRY org.eclipse.emf.ecore 2 0 2022-03-04 14:58:40.673
+!MESSAGE Both 'com.ibm.etools.javaee.core' and 'com.ibm.etools.mft.service.model' register an extension parser for 'application'
