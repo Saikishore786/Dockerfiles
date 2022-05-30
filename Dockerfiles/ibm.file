@@ -1,0 +1,6 @@
+FROM ibmcom/ace
+USER aceuser
+COPY hyd.bar /home/aceuser/intial-config/bars
+
+
+

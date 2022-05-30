@@ -1,0 +1,15 @@
+FROM oraclelinux:8
+user root
+RUN useradd mqm
+COPY IBM_ACE_12.0.1.0_LNX_X8664_INCTK.tar.gz /opt
+RUN yum update
+RUN yum install -y tar
+RUN cd /opt && tar -xvf IBM_ACE_12.0.1.0_LNX_X8664_INCTK.tar.gz
+RUN cd /opt/ace-12.0.1.0/ && ./ace make registry global accept license silently
+RUN usermod -G mqbrkrs mqm
+RUN /opt/ace-12.0.1.0/server/bin/mqsicreatebroker vinay
+RUN /opt/ace-12.0.1.0/server/bin  mqsistart vinay
+RUN /opt/ace-12.0.1.0/server/bin mqsilist
+RUN /opt/ace-12.0.1.0/server/bin mqsicreateexecutiongroup  vinay -e aditya_EG
+COPY /opt/ace-12.0.1.0/server/bin Httptestingsampleflow.bar /opt
+RUN cd /opt &&  mqsideploy vinay -e aditya_EG -a Httptestingsampleflow.bar 

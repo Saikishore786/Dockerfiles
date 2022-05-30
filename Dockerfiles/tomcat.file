@@ -1,0 +1,17 @@
+FROM ubuntu:18.04
+USER root
+RUN apt-get update 
+RUN apt-get install openjdk-11-jdk -y
+RUN java --version
+#COPY openjdk-11.0.1_linux-x64_bin.tar.gz /opt
+#COPY jdk-11.0.1 /opt
+RUN apt-get -y install tar
+WORKDIR /opt
+#RUN tar -xvf openjdk-11.0.1_linux-x64_bin.tar.gz
+#RUN export PATH=$/opt/jdk-11.0.1/bin:$PATH
+RUN java -version
+COPY apache-tomcat-9.0.58.tar.gz /opt
+RUN tar -xvf apache-tomcat-9.0.58.tar.gz
+COPY jenkins.war  /opt/apache-tomcat-9.0.58/webapps
+CMD chmod -R 775 /opt/apache-tomcat-9.0.58/bin/catalina.sh
+CMD ["/opt/apache-tomcat-9.0.58/bin/catalina.sh","run"]
