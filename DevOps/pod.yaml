@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: pod-pvc-pv
+   labels:
+      vol: pod-pvc
+spec:
+    volumes:
+       - name: sai-vol
+         persistentVolumeClaim:
+            claimName: pvc-volume-sai
+    containers:
+        - name: cont-vol
+          image: nginx
+          volumeMounts:
+                  - name: sai-vol
+                    mountPath: /cont-vol-path
+                
+
+

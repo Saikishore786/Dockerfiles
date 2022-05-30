@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testvolume
+spec:
+  containers:
+  - image: nginx
+    name: volcont
+    ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+    volumeMounts:
+      - name: newvolume
+        mountPath: /test-mnt
+  volumes:
+  - name: newvolume
+    hostPath:
+        path: /newvolume
+

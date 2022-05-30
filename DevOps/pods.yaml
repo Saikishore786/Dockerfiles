@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: kgf-vol
+   labels:
+      vol: pod-pvc
+spec:
+    volumes:
+       - name: kolar
+         persistentVolumeClaim:
+            claimName: veeraraghavan
+    containers:
+        - name: cont-vol
+          image: nginx
+          volumeMounts:
+                  - name: kolar
+                    mountPath: /cont-vol-path
+                
+
